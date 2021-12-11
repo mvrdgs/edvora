@@ -1,0 +1,37 @@
+.filters {
+  background-color: #131313;
+  border-radius: 15px;
+  min-height: 275px;
+  position: absolute;
+  margin: 43px 41px;
+  width: 228px;
+}
+
+.filter-title {
+  background-color: #131313;
+  border-bottom: solid #A5A5A5 1px;
+  color: #A5A5A5;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 24px 40px 10px 30px;
+  padding: 11px 0;
+}
+
+.filter-select {
+  width: 170px;
+  height: 38px;
+  color: #FFF;
+  margin: 5px 25px;
+  padding: 0 10px;
+  background: url("../public/Polygon\ 21.png") no-repeat right #292929;
+  background-position-x: 140px;
+  -webkit-appearance: none;
+}
+
+.filter-option {
+  padding: 10px;
+}
+
+.filters-container {
+  width: 100%;
+}
