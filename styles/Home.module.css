@@ -1,16 +1,24 @@
-.body {
-  padding: 0 2rem;
-  background-color: #292929;
-  min-height: 100vh;
-}
-
 .container {
-  
+  display: flex;
+  margin: 43px 41px;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.main {
+  margin: 0 34px;
+  width: 100%;
+}
+
+.title {
+  color: #FFF;
+  margin: 0;
+}
+
+.subtitle {
+  color: #A5A5A5;
+  margin: 20px 0 0 0;
+}
+
+.line {
+  border-bottom: 1px solid #A5A5A5;
+  width: 98%;
 }

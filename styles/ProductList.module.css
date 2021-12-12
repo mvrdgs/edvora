@@ -1,0 +1,15 @@
+.product-name {
+  color: #FFF;
+}
+
+.product-list {
+  align-items: center;
+  background: #131313;
+  border-radius: 15px;
+  display: flex;
+  height: 250px;
+  margin-left: -15px;
+  margin-top: 12px;
+  overflow-x: scroll;
+  width: 85%;
+}

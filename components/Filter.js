@@ -3,7 +3,7 @@ import styles from '../styles/Filter.module.css'
 
 function Filter(props) {
   return (
-    <section className={styles.filters}>
+    <aside className={styles.filters}>
       <h3 className={styles["filter-title"]}>Filters</h3>
       <div className={styles["filters-container"]}>
         <select
@@ -37,7 +37,7 @@ function Filter(props) {
           <option>Test</option>
         </select>
       </div>
-    </section>
+    </aside>
   );
 }
 
