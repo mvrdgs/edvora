@@ -24,7 +24,11 @@ function ProductList({ products }) {
       <div
         className={styles['carousel-container']}
       >
-        <button type="button" onClick={ () => handleScroll('left') }>{'<<'}</button>
+        <input
+          type="button"
+          onClick={ () => handleScroll('left') }
+          className={styles.previous}
+        />
         <div
           id={products[0].brand_name}
           className={styles["product-list"]}
@@ -38,7 +42,11 @@ function ProductList({ products }) {
             ))
           }
         </div>
-        <button type="button" onClick={ () => handleScroll('right')}>{'>>'}</button>
+        <input
+          type="button"
+          onClick={ () => handleScroll('right') }
+          className={styles.next}
+        />
       </div>
     </section>
   );

@@ -4,6 +4,8 @@ import ProductList from '../components/ProductList'
 import styles from '../styles/Home.module.css'
 import axios from 'axios'
 
+const filterUniqueItems = ((item, index, self) => self.indexOf(item) === index);
+
 export default function Home({ data }) {
   const [filteredData, setFilteredData] = useState(data);
   const productTypes = {};
@@ -17,11 +19,11 @@ export default function Home({ data }) {
   
   useEffect(() => {
     const products = data.map((product) => product.product_name)
-      .filter((product, index, self) => self.indexOf(product) === index);
+      .filter(filterUniqueItems);
     const states = data.map((product) => product.address.state)
-      .filter((state, index, self) => self.indexOf(state) === index);
+      .filter(filterUniqueItems);
     const cities = data.map((product) => product.address.city)
-      .filter((city, index, self) => self.indexOf(city) === index);
+      .filter(filterUniqueItems);
     setFilterOptions({ products, states, cities })
   }, [data])
 
