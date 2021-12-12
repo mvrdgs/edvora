@@ -8,7 +8,7 @@ function ProductList({ products }) {
   useEffect(() => {
     const productList = document.querySelector(`#${products[0].brand_name}`);
     productList.scrollTo(scroll, 0);
-  }, [scroll]);
+  }, [scroll, products]);
 
   const handleScroll = (side) => {
     const productList = document.querySelector(`#${products[0].brand_name}`);

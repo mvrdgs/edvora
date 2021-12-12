@@ -5,8 +5,9 @@ import styles from '../styles/Home.module.css'
 import axios from 'axios'
 
 export default function Home({ data }) {
+  const [filteredData, setFilteredData] = useState(data);
   const productTypes = {};
-  data.forEach((product) => {
+  filteredData.forEach((product) => {
     if (!productTypes[product.product_name]) productTypes[product.product_name] = [];
     productTypes[product.product_name].push(product);
   });
@@ -24,13 +25,11 @@ export default function Home({ data }) {
     setFilterOptions({ products, states, cities })
   }, [data])
 
-  console.log(filterOptions);
-
   console.log(productTypes);
 
   return (
     <div className={styles.container}>
-      <Filter filterOptions={filterOptions} />
+      <Filter filterOptions={filterOptions} data={data} setFilteredData={setFilteredData} />
       <main className={styles.main}>
         <header>
           <h1 className={styles.title}>Edvora</h1>
