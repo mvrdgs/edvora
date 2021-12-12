@@ -25,8 +25,6 @@ export default function Home({ data }) {
     setFilterOptions({ products, states, cities })
   }, [data])
 
-  console.log(productTypes);
-
   return (
     <div className={styles.container}>
       <Filter filterOptions={filterOptions} data={data} setFilteredData={setFilteredData} />

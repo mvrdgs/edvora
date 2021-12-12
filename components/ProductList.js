@@ -11,8 +11,7 @@ function ProductList({ products }) {
   }, [scroll, products]);
 
   const handleScroll = (side) => {
-    const productList = document.querySelector(`#${products[0].brand_name}`);
-    if (side === 'right' && scroll < productList.scrollWidth - 1000) setScroll(scroll + 500);
+    if (side === 'right' && scroll < (products.length * 250) - 500) setScroll(scroll + 500);
     if (side === 'left' && scroll > 0) setScroll(scroll - 500);
   };
 

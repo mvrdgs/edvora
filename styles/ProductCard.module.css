@@ -15,9 +15,10 @@
 .product-info {
   display: flex;
   flex-direction: column;
+  font-weight: 300;
   height: 80px;
   justify-content: space-between;
-  font-weight: 300;
+  width: 50%;
 }
 
 .product-info > div:nth-child(odd) {
