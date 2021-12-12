@@ -4,7 +4,6 @@ import styles from '../styles/Filter.module.css'
 function Filter({ filterOptions, data, setFilteredData }) {
   const { products, states, cities } = filterOptions;
   const [filters, setFilters] = useState({ product: '', state: '', city: '' });
-  console.log(filters);
 
   useEffect(() => {
     const filteredData = data
