@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from '../styles/Filter.module.css'
 
-function Filter(props) {
+function Filter({ filterOptions }) {
+  const { products, states, cities } = filterOptions;
+    
   return (
     <aside className={styles.filters}>
       <h3 className={styles["filter-title"]}>Filters</h3>
@@ -9,32 +11,26 @@ function Filter(props) {
         <select
           className={styles["filter-select"]}
         >
-          <option
-            className={styles["filter-option"]}
-          >Products</option>
-          <option>Test</option>
-          <option>Test</option>
-          <option>Test</option>
+          <option>Products</option>
+          {
+            products.map((product) => <option key={product} value={product}>{product}</option>)
+          }
         </select>
         <select
           className={styles["filter-select"]}
         >
-          <option
-            className={styles["filter-option"]}
-          >State</option>
-          <option>Test</option>
-          <option>Test</option>
-          <option>Test</option>
+          <option>State</option>
+          {
+            states.map((state) => <option key={state} value={state}>{state}</option>)
+          }
         </select>
         <select
           className={styles["filter-select"]}
         >
-          <option
-            className={styles["filter-option"]}
-          >City</option>
-          <option>Test</option>
-          <option>Test</option>
-          <option>Test</option>
+          <option>City</option>
+          {
+            cities.map((city) => <option key={city} value={city}>{city}</option>)
+          }
         </select>
       </div>
     </aside>

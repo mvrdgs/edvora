@@ -4,8 +4,8 @@
 }
 
 .main {
-  margin: 0 34px;
-  width: 100%;
+  margin-left: 34px;
+  width: 85%;
 }
 
 .title {
@@ -15,10 +15,5 @@
 
 .subtitle {
   color: #A5A5A5;
-  margin: 20px 0 0 0;
-}
-
-.line {
-  border-bottom: 1px solid #A5A5A5;
-  width: 98%;
+  margin-top: 20px;
 }

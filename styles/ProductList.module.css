@@ -1,15 +1,39 @@
+.product-list-container {
+}
+
 .product-name {
   color: #FFF;
 }
 
 .product-list {
+  -ms-overflow-style: none;
   align-items: center;
   background: #131313;
   border-radius: 15px;
   display: flex;
+  flex-shrink: 2;
+  min-width: 0;
   height: 250px;
-  margin-left: -15px;
   margin-top: 12px;
+  margin: 0 10px;
   overflow-x: scroll;
-  width: 85%;
+  scroll-behavior: smooth;
+  padding-right: 20px;
+  scrollbar-width: none;
+}
+
+.carousel-container {
+  margin-left: -20px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+
+.product-list::-webkit-scrollbar {
+  display: none;
+}
+
+.line {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #A5A5A5;
 }

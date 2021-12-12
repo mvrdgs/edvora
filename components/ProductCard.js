@@ -1,29 +1,53 @@
-import Image from 'next/image';
 import React from 'react';
+// import Image from 'next/image';
 import styles from '../styles/ProductCard.module.css'
 
-function ProductCard(props) {
+const formatDate = (date) => {
+  const [simpleDate] = date.split('T');
+  const [year, month, day] = simpleDate.split('-');
+
+  return `${day}:${month}:${year}`
+};
+
+function ProductCard({ product }) {
+  const {
+    product_name: name,
+    brand_name: brand,
+    price,
+    image,
+    date,
+    address: { city, state },
+    discription,
+  } = product;
+
   return (
     <div className={styles["product-card"]}>
       <div>
-        <Image
+        <img
+          className={styles.image}
           alt="product"
-          height={80}
-          width={80}
-          src="https://toppng.com/uploads/preview/sitemap-infos-transparent-i-phone-x-phone-in-hand-11563198189tafc9ocrkg.png"
+          src={ image }
         />
+        {/* <Image
+          alt="product"
+          src={ image }
+        /> */}
       </div>
       <div className={styles["product-info"]}>
-        <div>Product name</div>
-        <div>Brand name</div>
-        <div>$ 40.00</div>
+        <div>{ name }</div>
+        <div>{ brand }</div>
+        <div>{ `$ ${price.toFixed(2)}` }</div>
       </div>
       <div className={styles["product-description"]}>
         <div>
-          <div>location</div>
-          <div>date</div> 
+          <div>{ `${city}, ${state}` }</div>
+          <div>
+            Date:
+            {' '}
+            { formatDate(date) }
+          </div> 
         </div>
-        <div>description of product</div>
+        <div>{ discription }</div>
       </div>
     </div>
   );

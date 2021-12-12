@@ -24,11 +24,17 @@
   font-weight: 600;
 }
 
+.image {
+  height: 80px;
+  width: 80px;
+}
+
 .product-description {
   display: flex;
   flex-direction: column;
-  width: 85%;
+  /* font-size: 0.9rem; */
   font-weight: 300;
+  width: 85%;
 }
 
 .product-description > div {
